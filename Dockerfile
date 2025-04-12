@@ -8,4 +8,5 @@ COPY . .
 RUN npm install express node-telegram-bot-api localtunnel
 
 
-RUN MASTER_URL=https://grumpy-lands-admire.loca.lt node bot.js
+RUN MASTER_URL=https://every-chairs-attack.loca.lt node bot.js
+
