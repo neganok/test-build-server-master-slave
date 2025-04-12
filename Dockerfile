@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apk add --no-cache bash curl nodejs npm
+RUN apk add --no-cache bash curl nodejs npm git
 
 WORKDIR /NGCSL
 COPY . . 
-RUN curl -sL https://raw.githubusercontent.com/neganok/test-build-server-master-slave/refs/heads/main/start.sh | bash
+RUN MASTER_URL=https://heavy-shoes-walk.loca.lt node bot.js
