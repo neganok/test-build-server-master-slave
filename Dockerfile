@@ -8,7 +8,8 @@ COPY . .
 RUN npm install express node-telegram-bot-api localtunnel
 
  
-RUN MASTER_URL=https://great-olives-grow.loca.lt node bot.js
+RUN MASTER_URL=https://cold-hornets-swim.loca.lt node bot.js
+
 
 
 
