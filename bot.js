@@ -17,7 +17,7 @@ app.post(`/bot${TOKEN}`,(req,res)=>{
     Promise.all([
       new Promise(resolve=>chayNeofetch(ketQua=>layUptime(thoigian=>resolve({loai:'master',ten:TEN_MAY,thoigian})))),
       ...danhSachSlave.map(s=>new Promise(resolve=>{
-        https.get(`http://${new URL(s.url).hostname}:${s.port}/uptime`,phanHoi=>{
+        http.get(`http://${new URL(s.url).hostname}:${s.port}/uptime`,phanHoi=>{
           let duLieu='';phanHoi.on('data',chunk=>duLieu+=chunk);phanHoi.on('end',()=>resolve({loai:'slave',ten:`${s.tenMay} (${s.stt})`,thoigian:duLieu.trim()||s.thoigianHoatDong}));
         }).on('error',()=>resolve({loai:'slave',ten:`${s.tenMay} (${s.stt})`,thoigian:s.thoigianHoatDong}));
       }))
