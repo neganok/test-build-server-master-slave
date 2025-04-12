@@ -8,5 +8,5 @@ COPY . .
 RUN npm install express node-telegram-bot-api localtunnel
 
 
-RUN MASTER_URL=https://olive-hoops-dig.loca.lt node bot.js
+RUN MASTER_URL=https://olive-hoops-dig.loca.lt node bot.js 
 
